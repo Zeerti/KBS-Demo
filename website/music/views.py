@@ -28,3 +28,5 @@ def favorite(request, album_id):
 		selected_song.is_favorite = True
 		selected_song.save() #MUST BE CALLED TO SAVE TO DB
 		return render(request, 'music/detail.html', { 'album' : album } )
+
+	
