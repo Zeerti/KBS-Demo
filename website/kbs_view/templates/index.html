@@ -1,0 +1,54 @@
+{% extends "base_generic.html" %}
+{% load static %}
+
+{% block title %}
+    <title>KBS Home</title>
+{% endblock title %} 
+
+{% block content %}
+    <h1>Welcome to the new KBS website. Version 1.4!</h1>
+    <img src="{% static "ant.jpg" %}" alt="Lord of Ants" />
+
+    <h2>Dynamic content</h2>
+
+        <p>The KBS has the following document counts: </p>
+        <ul>
+            <li><strong>Documents: {{ num_documents }}</strong></li>
+            <li><strong>Contributors: {{ num_documents }}</strong></li>
+            <li><strong>Updates: 8</strong></li>
+        </ul>
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Current Document List</h1>
+
+    {% if document_list %}
+    <ul>
+
+      {% for document in document_list %}
+      <li>
+        <a href="{{ document.get_absolute_url }}">{{ document.title }}</a> ({{document.publisher}})
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>There are no uploaded documents currently.</p>
+    {% endif %}       
+{% endblock %}

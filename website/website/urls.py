@@ -20,7 +20,8 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^kbs_view/', include('kbs_view.urls')),
+    url(r'^home/', include('kbs_view.urls')),
+    url(r'^markdownx/', include('markdownx.urls')),
     url(r'^', admin.site.urls),
     
 
