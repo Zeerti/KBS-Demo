@@ -3,6 +3,7 @@ from django.db import models
 from kbs_view.models import Document, Files
 
 from markdownx.widgets import AdminMarkdownxWidget
+from markdownx.models import MarkdownxField
 # Register your models here.
 
 
@@ -17,7 +18,8 @@ class DocumentAdminTest(admin.ModelAdmin):
 	list_display = ('title', 'date_modified', 'publisher')
 
 	formfield_overrides = {
-		models.TextField: {'widget': AdminMarkdownxWidget}
+		#models.TextField: {'widget': AdminMarkdownxWidget},
+		#MarkdownxField: {'widget': AdminMarkdownxWidget}
 	}
 
 admin.site.register(Document, DocumentAdminTest)

@@ -3,6 +3,7 @@
 {% block title %}<title>{{ document.title }}</title> {% endblock title %}
 
 {% block content %}
+
 	<h1>{{ document.title }}</h1>
 	<p><strong>Software: </strong>{{ document.software_product }}</p>
 	<p><strong>Publisher: </strong>{{ document.publisher }}</p>
@@ -11,4 +12,10 @@
 	<p><strong>Document Details: </strong><br>{{ document.body }}</p><br>
 
 	<p><strong>Total Views: </strong>{{ document.views }}</p><br>
+
+	<form role='form' method="POST" action="">
+		{% csrf_token %}
+		{{ form.as_p }}
+	</form>
+	{{ form.media }}
 {% endblock content %}

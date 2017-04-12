@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^home/', include('kbs_view.urls')),
     url(r'^markdownx/', include('markdownx.urls')),
     url(r'^', admin.site.urls),
+    url('^accounts/', include('django.contrib.auth.urls')),
     
 
 ]

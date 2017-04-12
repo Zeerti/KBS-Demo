@@ -15,8 +15,10 @@
         <ul>
             <li><strong>Documents: {{ num_documents }}</strong></li>
             <li><strong>Contributors: {{ num_documents }}</strong></li>
-            <li><strong>Updates: 8</strong></li>
+            <li><strong>Updates: 9</strong></li>
         </ul>
+
+        <p>You have visited this page {{ num_visits }}{% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
 {% endblock content %}
 
 
